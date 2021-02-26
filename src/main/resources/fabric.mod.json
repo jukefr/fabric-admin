@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "fabric_admin",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Fabric Admin",
+  "description": "Sysadmin stuffs for Fabric MC",
   "authors": [
-    "Me!"
+    "jukefr"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/jukefr/fabric-admin",
+    "sources": "https://github.com/jukefr/fabric-admin"
   },
 
-  "license": "CC0-1.0",
+  "license": "AGPL-3.0",
   "icon": "assets/modid/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "org.jukefr.fabric_admin.Main"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "fabric_admin.mixins.json"
   ],
 
   "depends": {

@@ -1,6 +1,6 @@
-package net.fabricmc.example.dao.impl;
+package org.jukefr.fabric_admin.dao.impl;
 
-import net.fabricmc.example.config.HibernateConfig;
+import org.jukefr.fabric_admin.config.HibernateConfig;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -15,9 +15,9 @@ public class CommonDaoImpl {
         this.session = sessionFactory.getCurrentSession();
     }
 
-    protected int saveEntity(Object obj) throws HibernateException {
+    protected Integer saveEntity(Object obj) throws HibernateException {
         Transaction transaction = session.beginTransaction();
-        int id = (Integer) session.save(obj);
+        Integer id = (Integer) session.save(obj);
         transaction.commit();
         return id;
     }

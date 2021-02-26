@@ -1,4 +1,4 @@
-package net.fabricmc.example.config;
+package org.jukefr.fabric_admin.config;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;

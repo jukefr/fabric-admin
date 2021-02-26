@@ -1,7 +1,7 @@
-package net.fabricmc.example.dao.impl;
+package org.jukefr.fabric_admin.dao.impl;
 
-import net.fabricmc.example.dao.LogDAO;
-import net.fabricmc.example.entity.Log;
+import org.jukefr.fabric_admin.dao.LogDAO;
+import org.jukefr.fabric_admin.entity.Log;
 import org.hibernate.HibernateException;
 
 import java.util.List;
@@ -9,12 +9,12 @@ import java.util.List;
 public class LogDaoImpl extends CommonDaoImpl implements LogDAO {
 
     @Override
-    public int createLog(Log log) throws HibernateException {
+    public Integer createLog(Log log) throws HibernateException {
         return super.saveEntity(log);
     }
 
     @Override
-    public Log getLog(int id) throws HibernateException {
+    public Log getLog(Integer id) throws HibernateException {
         return null;
     }
 

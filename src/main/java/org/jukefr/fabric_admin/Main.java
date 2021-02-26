@@ -1,16 +1,13 @@
-package net.fabricmc.example;
+package org.jukefr.fabric_admin;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.example.dao.LogDAO;
-import net.fabricmc.example.dao.impl.LogDaoImpl;
-import net.fabricmc.example.entity.Log;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
+import org.jukefr.fabric_admin.dao.LogDAO;
+import org.jukefr.fabric_admin.dao.impl.LogDaoImpl;
+import org.jukefr.fabric_admin.entity.Log;
 
 import java.util.Date;
 
-public class ExampleMod implements ModInitializer {
+public class Main implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -23,7 +20,7 @@ public class ExampleMod implements ModInitializer {
 
 		Log log = new Log("this is a test log", new Date());
 
-		int id = logDAO.createLog(log);
+		Integer id = logDAO.createLog(log);
 
 		System.out.println(id);
 
