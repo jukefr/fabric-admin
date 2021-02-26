@@ -24,6 +24,10 @@ public class Main implements ModInitializer {
 
 		System.out.println(id);
 
+		System.out.println(logDAO.getLog(id).toString());
+
+		System.out.println(logDAO.getLogs().toString());
+
 	}
 
 }

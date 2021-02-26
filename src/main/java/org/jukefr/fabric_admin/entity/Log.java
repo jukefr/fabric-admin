@@ -16,24 +16,24 @@ public class Log {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-//    @Column
-//    private Date date;
+    @Column
+    private Date date;
 
     @Column
     private String message;
 
     public Log(String message, Date date) {
         this.message = message;
-//        this.date = date;
+        this.date = date;
     }
 
-//    public Date getDate() {
-//        return date;
-//    }
-//
-//    public void setDate(Date date) {
-//        this.date = date;
-//    }
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
     public String getMessage() {
         return message;

@@ -11,6 +11,6 @@ public interface LogDAO {
 
      Log getLog(Integer id) throws HibernateException;
 
-     List<Log> listAllLogs() throws HibernateException;
+     List<Log> getLogs() throws HibernateException;
 
 }

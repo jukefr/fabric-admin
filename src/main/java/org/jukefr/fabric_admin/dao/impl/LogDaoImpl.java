@@ -15,12 +15,12 @@ public class LogDaoImpl extends CommonDaoImpl implements LogDAO {
 
     @Override
     public Log getLog(Integer id) throws HibernateException {
-        return null;
+        return (Log) super.getEntity(Log.class, id);
     }
 
     @Override
-    public List<Log> listAllLogs() throws HibernateException {
-        return null;
+    public List<Log> getLogs() throws HibernateException {
+        return super.getEntities(Log.class);
     }
 
 }
