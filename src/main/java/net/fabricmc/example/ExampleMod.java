@@ -1,10 +1,14 @@
 package net.fabricmc.example;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.example.schemas.Log;
+import net.fabricmc.example.dao.LogDAO;
+import net.fabricmc.example.dao.impl.LogDaoImpl;
+import net.fabricmc.example.entity.Log;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+
+import java.util.Date;
 
 public class ExampleMod implements ModInitializer {
 	@Override
@@ -15,30 +19,14 @@ public class ExampleMod implements ModInitializer {
 
 		System.out.println("Hello Fabric world!");
 
-		Log log = new Log();
-		log.setMessage("this is a test log");
-		log.setTimestamp(System.currentTimeMillis());
+		LogDAO logDAO = new LogDaoImpl();
 
-		SessionFactory sessionFactory = buildSessionFactory();
-		Session session = sessionFactory.openSession();
-		System.out.println("1");
-		System.out.println(log.getMessage() + log.getTimestamp());
-		session.save(log);
-		System.out.println("2");
+		Log log = new Log("this is a test log", new Date());
 
-		Log savedLog = session.get(Log.class, 1);
+		int id = logDAO.createLog(log);
 
-		System.out.println(savedLog);
-
-		session.close();
-		sessionFactory.close();
+		System.out.println(id);
 
 	}
 
-	private static SessionFactory buildSessionFactory() {
-		return new Configuration()
-				.configure()
-				.addAnnotatedClass(Log.class)
-				.buildSessionFactory();
-	}
 }
