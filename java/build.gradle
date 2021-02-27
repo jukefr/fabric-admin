@@ -33,7 +33,6 @@ dependencies {
 	// H2 and Hibernate
 	modImplementation implementation(include("com.h2database:h2:1.4.200"))
 	modImplementation implementation(include("org.hibernate:hibernate-core:5.4.28.Final"))
-
 	// need this for it to work on its own without IDE for some reason..
 	modImplementation implementation(include("javax.persistence:javax.persistence-api:2.2"))
 	modImplementation implementation(include("org.antlr:antlr-complete:3.5.2"))
@@ -47,6 +46,9 @@ dependencies {
 	modImplementation implementation(include("org.hibernate:hibernate-commons-annotations:3.2.0.Final"))
 	modImplementation implementation(include("org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.2.Final"))
 
+	// Configuration
+//	modImplementation implementation(include("com.google.code.gson:gson:2.8.6"))
+	modImplementation implementation(include("com.typesafe:config:1.4.1"))
 }
 
 processResources {

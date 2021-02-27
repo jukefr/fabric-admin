@@ -34,3 +34,7 @@ None of it will provide any visible in game functionality (but can optimize whil
     - [ ] anticheat/antiexploit, mostly just stuff that messes with TPS or crashes the server idc about dupes etc
 - [ ] maybe learn java at this point
     - [ ] topkek as if i'd waste braincells on that *wheeze*
+    
+## Special mention
+I won't be doing anything related to windows as this is a server side mod intended for actual production instances if you catch my drift timmy.
+Feel free to open a PR though to make it work if you can/want.
