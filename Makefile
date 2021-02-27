@@ -1,5 +1,5 @@
 runServer: buildServerImage runPackager
-	docker run --mount src=$(CURDIR)/build,target=/app/mods,type=bind fabric-admin-test-server
+	docker run -it --mount src=$(CURDIR)/build,target=/app/mods,type=bind fabric-admin-test-server
 
 buildServerImage:
 	docker build -t fabric-admin-test-server -f docker/server.Dockerfile .
