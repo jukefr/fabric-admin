@@ -26,11 +26,11 @@ public class CommonDaoImpl {
         return id;
     }
 
-    protected Object getEntity(Class type, Integer id) throws  HibernateException {
+    protected Object getEntity(Class type, Integer id) throws HibernateException {
         return session.get(type, id);
     }
 
-    protected <T> List<T> getEntities(Class<T> type) throws  HibernateException {
+    protected <T> List<T> getEntities(Class<T> type) throws HibernateException {
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> criteria = builder.createQuery(type);
         criteria.from(type);

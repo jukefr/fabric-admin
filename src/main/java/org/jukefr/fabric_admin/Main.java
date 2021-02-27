@@ -8,26 +8,26 @@ import org.jukefr.fabric_admin.entity.Log;
 import java.util.Date;
 
 public class Main implements ModInitializer {
-	@Override
-	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+    @Override
+    public void onInitialize() {
+        // This code runs as soon as Minecraft is in a mod-load-ready state.
+        // However, some things (like resources) may still be uninitialized.
+        // Proceed with mild caution.
 
-		System.out.println("Hello Fabric world!");
+        System.out.println("Hello Fabric world!");
 
-		LogDAO logDAO = new LogDaoImpl();
+        LogDAO logDAO = new LogDaoImpl();
 
-		Log log = new Log("this is a test log", new Date());
+        Log log = new Log("this is a test log", new Date());
 
-		Integer id = logDAO.createLog(log);
+        Integer id = logDAO.createLog(log);
 
-		System.out.println(id);
+        System.out.println(id);
 
-		System.out.println(logDAO.getLog(id).toString());
+        System.out.println(logDAO.getLog(id).toString());
 
-		System.out.println(logDAO.getLogs().toString());
+        System.out.println(logDAO.getLogs().toString());
 
-	}
+    }
 
 }

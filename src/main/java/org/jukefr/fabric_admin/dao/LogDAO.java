@@ -7,10 +7,10 @@ import java.util.List;
 
 public interface LogDAO {
 
-     Integer createLog(Log log) throws HibernateException;
+    Integer createLog(Log log) throws HibernateException;
 
-     Log getLog(Integer id) throws HibernateException;
+    Log getLog(Integer id) throws HibernateException;
 
-     List<Log> getLogs() throws HibernateException;
+    List<Log> getLogs() throws HibernateException;
 
 }
