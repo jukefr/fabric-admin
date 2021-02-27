@@ -1,5 +1,6 @@
 FROM gradle:jdk8
-COPY --chown=gradle:gradle ../java /home/gradle/src
+USER root
+COPY ./java /home/gradle/src
+COPY ./docker/gradleBuild.sh /home/gradle/src/entrypoint.sh
 WORKDIR /home/gradle/src
-RUN ./gradlew build --stacktrace
-VOLUME /home/gradle/src/build/libs
+ENTRYPOINT /home/gradle/src/entrypoint.sh

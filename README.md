@@ -6,7 +6,7 @@ None of it will provide any visible in game functionality (but can optimize whil
 ## TODO
 - [x] Setup embedded DB as "temporary storage area" in case of excessive ingress/egress
 - [x] Setup ORM/DAO layer 
-- [ ] setup Dockerized testing/build env
+- [x] setup Dockerized testing/build env
 - [ ] configuration lib integration
 - [ ] modular orchestration of components
 - [ ] see how java docs are handled
